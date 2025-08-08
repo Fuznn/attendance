@@ -42,6 +42,19 @@ namespace attendance
         private void button3_Click(object sender, EventArgs e)
         {
             string content = LoadFile.loadFile(textBox1.Text);
+            string filePath = textBox1.Text;
+            string fileContent = LoadFile.loadFile(filePath);
+            MessageBox.Show(fileContent);
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

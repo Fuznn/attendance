@@ -9,14 +9,15 @@ namespace attendance
 {
     internal class CreateFile
     {
-        public static string createFile(TextBox txtSave)
+        public static string? createFile(TextBox txtSave)
         {
             try 
             {
                 using var saveFileDialog = new System.Windows.Forms.SaveFileDialog
                 {
                     Title = "Create Attendance File",
-                    Filter = "Text Files (*.txt)|*.txt|CSV Files (*.csv)|*.csv|All Files (*.*)|*.*",
+                    //Filter = "Text Files (*.txt)|*.txt|CSV Files (*.csv)|*.csv|All Files (*.*)|*.*",
+                    Filter = "INI Files (*.ini)|*.ini|All Files (*.*)|*.*",
                     InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments),
                     FileName = "attendance.txt",
                     DefaultExt = "txt"

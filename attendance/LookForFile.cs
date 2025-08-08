@@ -18,7 +18,8 @@ namespace attendance
             using var openFileDialog = new OpenFileDialog
             {
                 Title = "Select or Create Section File",
-                Filter = "Text Files (*.txt)|*.txt|CSV Files (*.csv)|*.csv|All Files (*.*)|*.*",
+                //Filter = "Text Files (*.txt)|*.txt|CSV Files (*.csv)|*.csv|All Files (*.*)|*.*",
+                Filter = "INI Files (*.ini)|*.ini|All Files (*.*)|*.*",
                 InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
             };
             try

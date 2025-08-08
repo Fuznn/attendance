@@ -33,10 +33,16 @@
             btnBrowse = new Button();
             btnCreate = new Button();
             btnLoad = new Button();
+            dataGridView1 = new DataGridView();
+            Student = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
             // 
+            label1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             label1.AutoSize = true;
             label1.BackColor = Color.Gray;
             label1.FlatStyle = FlatStyle.Popup;
@@ -51,17 +57,18 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             textBox1.Location = new Point(12, 414);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(521, 23);
+            textBox1.Size = new Size(492, 23);
             textBox1.TabIndex = 1;
             textBox1.Text = "Enter directory here or browse files...";
             textBox1.TextChanged += textBox1_TextChanged_1;
             // 
             // btnBrowse
             // 
-            btnBrowse.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnBrowse.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnBrowse.Location = new Point(539, 413);
             btnBrowse.Name = "btnBrowse";
             btnBrowse.Size = new Size(79, 24);
@@ -72,7 +79,7 @@
             // 
             // btnCreate
             // 
-            btnCreate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnCreate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnCreate.Location = new Point(624, 413);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new Size(87, 24);
@@ -83,7 +90,7 @@
             // 
             // btnLoad
             // 
-            btnLoad.Anchor = AnchorStyles.Left;
+            btnLoad.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnLoad.Location = new Point(717, 413);
             btnLoad.Name = "btnLoad";
             btnLoad.Size = new Size(71, 24);
@@ -92,12 +99,45 @@
             btnLoad.UseVisualStyleBackColor = true;
             btnLoad.Click += button3_Click;
             // 
+            // dataGridView1
+            // 
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.BackgroundColor = SystemColors.Control;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Student, Column1, Column2 });
+            dataGridView1.Location = new Point(12, 12);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.Size = new Size(606, 372);
+            dataGridView1.TabIndex = 8;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // Student
+            // 
+            Student.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+            Student.Frozen = true;
+            Student.HeaderText = "Name";
+            Student.Name = "Student";
+            Student.Width = 188;
+            // 
+            // Column1
+            // 
+            Column1.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column1.HeaderText = "Tardiness";
+            Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            Column2.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            Column2.HeaderText = "Status";
+            Column2.Name = "Column2";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.SlateGray;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(btnLoad);
             Controls.Add(btnCreate);
             Controls.Add(btnBrowse);
@@ -106,6 +146,7 @@
             Name = "Form1";
             Text = "Attendance Taker";
             Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -117,5 +158,9 @@
         private Button btnBrowse;
         private Button btnCreate;
         private Button btnLoad;
+        private DataGridView dataGridView1;
+        private DataGridViewTextBoxColumn Student;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
     }
 }

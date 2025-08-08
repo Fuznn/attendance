@@ -12,25 +12,17 @@ namespace attendance
         {
             try
             {
-                if (string.IsNullOrEmpty(filePath))
-                {
+                if (string.IsNullOrWhiteSpace(filePath))
                     throw new ArgumentException("File path cannot be null or empty.", nameof(filePath));
-                    
-                }
-                // Check if the file exists
-                if (!System.IO.File.Exists(filePath))
-                {
-                    throw new System.IO.FileNotFoundException("The specified file does not exist.", filePath);
-                }
-                // Read the content of the file
-                string content = System.IO.File.ReadAllText(filePath);
-                return content;
+                if(!File.Exists(filePath))
+                    throw new FileNotFoundException("File was not found.", filePath);
             }
             catch (Exception ex)
             {
-                // Handle exceptions and return an error message
-                return $"Error accessing file: {ex.Message}";
+                Console.WriteLine($"An error occurred while loading the file: {ex.Message}");
+                
             }
+            return File.ReadAllText(filePath);
         }
 
     }
