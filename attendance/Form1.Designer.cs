@@ -58,45 +58,56 @@
             // textBox1
             // 
             textBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            textBox1.Font = new Font("Segoe UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(12, 414);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(492, 23);
+            textBox1.PlaceholderText = "Enter directory here or browse files...";
+            textBox1.Size = new Size(346, 23);
             textBox1.TabIndex = 1;
-            textBox1.Text = "Enter directory here or browse files...";
+            textBox1.TabStop = false;
             textBox1.TextChanged += textBox1_TextChanged_1;
             // 
             // btnBrowse
             // 
             btnBrowse.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnBrowse.Location = new Point(539, 413);
+            btnBrowse.BackColor = SystemColors.Control;
+            btnBrowse.FlatStyle = FlatStyle.Popup;
+            btnBrowse.Font = new Font("Segoe UI", 8.25F);
+            btnBrowse.Location = new Point(369, 414);
             btnBrowse.Name = "btnBrowse";
             btnBrowse.Size = new Size(79, 24);
             btnBrowse.TabIndex = 2;
             btnBrowse.Text = "Browse";
-            btnBrowse.UseVisualStyleBackColor = true;
+            btnBrowse.UseVisualStyleBackColor = false;
             btnBrowse.Click += button1_Click;
             // 
             // btnCreate
             // 
             btnCreate.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnCreate.Location = new Point(624, 413);
+            btnCreate.BackColor = SystemColors.Control;
+            btnCreate.FlatStyle = FlatStyle.Popup;
+            btnCreate.Font = new Font("Segoe UI", 8.25F);
+            btnCreate.Location = new Point(454, 413);
             btnCreate.Name = "btnCreate";
             btnCreate.Size = new Size(87, 24);
             btnCreate.TabIndex = 3;
             btnCreate.Text = "Create";
-            btnCreate.UseVisualStyleBackColor = true;
+            btnCreate.UseVisualStyleBackColor = false;
             btnCreate.Click += button2_Click;
             // 
             // btnLoad
             // 
             btnLoad.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            btnLoad.Location = new Point(717, 413);
+            btnLoad.BackColor = SystemColors.Control;
+            btnLoad.FlatStyle = FlatStyle.Popup;
+            btnLoad.Font = new Font("Segoe UI", 8.25F);
+            btnLoad.Location = new Point(547, 414);
             btnLoad.Name = "btnLoad";
             btnLoad.Size = new Size(71, 24);
             btnLoad.TabIndex = 4;
             btnLoad.Text = "Load";
-            btnLoad.UseVisualStyleBackColor = true;
+            btnLoad.UseVisualStyleBackColor = false;
             btnLoad.Click += button3_Click;
             // 
             // dataGridView1
