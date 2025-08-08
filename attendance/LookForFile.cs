@@ -34,6 +34,7 @@ namespace attendance
             {
                 MessageBox.Show($"Exception occured while opening the file: {ex.Message}");
             }
+            //gegegge 
         }
     }
 }
